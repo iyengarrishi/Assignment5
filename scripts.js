@@ -17,6 +17,34 @@
 
 console.log ("Loaded Page");
 
+// 4) Let us set UNEMPLOYMENT as the local filename of the JSON file we just loaded. 
+
+function stepThree(DATASET){
+	console.log(DATASET);
+// 5) Since we are only interested in the observations, we will now pull those out using a variable
+
+ var pullOut = DATASET.observations;
+ 
+// 6) We arrange the data we have as an array of arrays
+
+ var ideserveArrays = [];
+  
+	
+}
+
+// 3) Now, we define the callback function for the Google Visualization Library
+
+function stepTwo(){
+	console.log ("Google has come to the party");
+	
+// 4) We load our data within this function using .get
+// I will be safe and use the same data set from class.
+
+$.get("UEMP270V_data.json", stepThree, "json");
+
+//The .get includes file name, function name and file type
+}
+
 // 2) Next, we define the callback function for document ready
 
 function stepOne(){
