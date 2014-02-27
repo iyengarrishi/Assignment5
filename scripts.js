@@ -28,6 +28,11 @@ function stepThree(DATASET){
 // 6) We arrange the data we have as an array of arrays
 
  var ideserveArrays = [];
+ 
+	//We should also add headers to name our variables
+	
+ var myHeader = ["Date", "Value"];
+ ideserveArrays.push(myHeader);	
 
 // 7) After making the empty parent array, we create a for loop
 // Since there are too many data points, we use the .length property to specify number of loops
@@ -50,7 +55,22 @@ for (var i=0; i<pullOut.length, i++;) {
 	}
 	
 	console.log(ideserveArrays);   
+	
+// 10) Next, I will feed the data into the Google Visualization library using the array to data table function
+
+	var dataHere = google.visualization.arrayToDataTable(ideserveArrays);
+
+// 11) We must put the chart on our page using a div, which I will go create in the HTML file now	
  	
+ 	var makeChart = new google.visualization.BarChart(document.getElementById("chartHere"));
+ 	
+// 12) Finally, we render the chart on the page, but not before determining what we want it to look like using the 'options' tag
+
+	var options = {
+		title:"Unemployment Trends", curveType:"function", backgroundColor:"blue"
+	};
+	
+	makeChart.draw(dataHere, options);
 }
 
 // 3) Now, we define the callback function for the Google Visualization Library
