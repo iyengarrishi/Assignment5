@@ -28,8 +28,29 @@ function stepThree(DATASET){
 // 6) We arrange the data we have as an array of arrays
 
  var ideserveArrays = [];
-  
+
+// 7) After making the empty parent array, we create a for loop
+// Since there are too many data points, we use the .length property to specify number of loops
+
+for (var i=0; i<pullOut.length, i++;) {
+// 8) Within this for loop, we create our second array, i.e. the child array
 	
+	//Observations is an array of objects, so this next variable will loop through each of them
+	var iObject = pullOut[i];
+	
+    //For the chart, we only need two variables - date and value
+    //We need to specify that value is a number, because it is a string in the data set
+    
+    var udeserveArrays = [iObject.date, Number(iObject.value)];
+
+// 9) We now push our second array into its parent array
+
+	ideserveArrays.push(udeserveArrays);
+	
+	}
+	
+	console.log(ideserveArrays);   
+ 	
 }
 
 // 3) Now, we define the callback function for the Google Visualization Library
