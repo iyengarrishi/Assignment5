@@ -2,7 +2,6 @@
  * @author
  */
 
-console.log ("Loaded Page");
 
 /* Project Plan 
 1. Load libraries (jQuery and Google JS)
@@ -24,7 +23,12 @@ function stepOne(){
 //Console log to make sure it is working
 console.log("My document must be ready");
 
+//Load Google Visualization library
+google.load("visualization", "1", {packages:["corechart"], callback:"stepTwo"});
 }
+
+
+
 
 
 // 1) First, we set up document ready
