@@ -37,7 +37,7 @@ function stepThree(DATASET){
 // 7) After making the empty parent array, we create a for loop
 // Since there are too many data points, we use the .length property to specify number of loops
 
-for (var i=0; i<pullOut.length, i++;) {
+for (var i=0; i<pullOut.length; i++) {
 // 8) Within this for loop, we create our second array, i.e. the child array
 	
 	//Observations is an array of objects, so this next variable will loop through each of them
@@ -54,8 +54,8 @@ for (var i=0; i<pullOut.length, i++;) {
 	
 	}
 	
-	console.log(ideserveArrays);   
-	
+	  
+	console.log(ideserveArrays);
 // 10) Next, I will feed the data into the Google Visualization library using the array to data table function
 
 	var dataHere = google.visualization.arrayToDataTable(ideserveArrays);
@@ -67,7 +67,7 @@ for (var i=0; i<pullOut.length, i++;) {
 // 12) Finally, we render the chart on the page, but not before determining what we want it to look like using the 'options' tag
 
 	var options = {
-		title:"Unemployment Trends", curveType:"function", backgroundColor:"blue"
+		title:"Unemployment Trends", curveType:"function", backgroundColor:"black"
 	};
 	
 	makeChart.draw(dataHere, options);
