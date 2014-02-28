@@ -67,7 +67,7 @@ for (var i=0; i<pullOut.length; i++) {
 // 12) Finally, we render the chart on the page, but not before determining what we want it to look like using the 'options' tag
 
 	var options = {
-		title:"Unemployment Trends", curveType:"function", backgroundColor:"black"
+		title:"Unemployment Trends", curveType:"function", backgroundColor:"white"
 	};
 	
 	makeChart.draw(dataHere, options);
